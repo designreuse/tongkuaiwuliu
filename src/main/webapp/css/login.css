@@ -1,0 +1,37 @@
+span,a,label,p{
+    font-family: "Microsoft YaHei", sans-serif ! important;
+}
+
+h1, h2, h3, h4, h5, h6, #title span {
+    font-family: "Microsoft YaHei", sans-serif ! important;
+    color: white;
+    font-weight: normal;
+}
+
+.navbar {
+    background-color: #337AB7;
+}
+
+#navbar-header{
+    margin: 5px;
+    color: white;
+}
+
+#nav-brand {
+    width: 20px;
+    height: 20px;
+    margin-top: -5px;
+}
+
+#text-head {
+    color: #337AB7;
+}
+
+.img-circle {
+    height: 20px;
+    width: 20px;
+}
+
+.fa-leaf {
+    color:white;
+}

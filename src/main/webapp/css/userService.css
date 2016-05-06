@@ -1,0 +1,328 @@
+span, a, label, p {
+    font-family: "Microsoft YaHei", sans-serif ! important;
+}
+
+h1, h2, h3, h4, h5, h6, #title span {
+    font-family: "Microsoft YaHei", sans-serif ! important;
+    color: white;
+    font-weight: normal;
+}
+
+.headText a {
+    color: white;
+    text-decoration: none;
+}
+
+.navHeader a:hover {
+    cursor: pointer;
+}
+
+body {
+    background: url("../images/bg.jpg") no-repeat;
+    background-size: cover;
+}
+
+/*-------------------Header-------------------*/
+
+.navHeader {
+    height: 50px;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0px 10px 5px #888888;
+    width: 100%;
+}
+
+.navHeader #headIcon {
+    font-size: 2em;
+    margin-top: 10px;
+    margin-left: 40px;
+}
+
+.navHeader #headText {
+    font-size: 1.8em;
+    text-shadow: 1px 1px 2px lightgray;
+}
+
+/*-------------------Footer-------------------*/
+.siteFooter {
+    color: white;
+    font-size: 14px;
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+    background-color: #438EB9;
+}
+
+.siteFooter p {
+    padding-top: 20px;
+}
+
+/*-------------------mainMenu-------------------*/
+.mainMenu {
+    list-style-type: none;
+    margin-left: 50px;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.mainMenu .fa {
+    color: white;
+}
+
+.mainMenu li {
+    margin-top: 40px;
+}
+
+.mainMenu .search, .mainMenu .express, .mainMenu .myOrder, .mainMenu .user {
+    width: 120px;
+    height: 120px;
+}
+
+.mainMenu .search i, .mainMenu .express i, .mainMenu .myOrder i, .mainMenu .user i {
+    padding: 48px;
+}
+
+.mainMenu a {
+    text-decoration: none;
+}
+
+.mainMenu a:hover {
+    cursor: pointer;
+}
+
+.mainMenu .search p, .mainMenu .express p, .mainMenu .myOrder p, .mainMenu .user p {
+    font-weight: bold;
+    font-size: 14px;
+    color: white;
+    margin-top: -40px;
+    margin-left: 35px;
+}
+
+.search {
+    background-color: #207D59;
+}
+
+.express {
+    background-color: #207D59;
+}
+
+.myOrder {
+    background-color: #3B5B8E;
+}
+
+.user {
+    background-color: #B85B53;
+}
+
+/*-------------------Box-------------------*/
+.searchBox {
+    position: relative;
+    z-index: 5;
+}
+
+.userBox, .myOrderBox, .taskBox, .alertBox {
+    z-index: 0;
+}
+
+.taskBox {
+    background-color: white;
+    width: 900px;
+    height: 620px;
+    float: right;
+    margin-top: -560px;
+    margin-right: 150px;
+    margin-bottom: 100px;
+    box-shadow: 10px 10px 5px #888888;
+    position: relative;
+}
+
+.myOrderBox {
+    position: relative;
+    margin-top: -42%;
+    margin-right: 320px;
+    margin-bottom: 100px;
+    float: right;
+}
+.hideOrderBox {
+    position: relative;
+    margin-top: -560px;
+    margin-right: 320px;
+    margin-bottom: 100px;
+    float: right;
+}
+
+.subOrderBox {
+    background-color: white;
+    width: 600px;
+    height: 400px;
+    box-shadow: 10px 10px 5px #888888;
+    position: relative;
+    margin-bottom: 80px;
+}
+
+.subOrderBox .content {
+    margin: 0px 50px 50px;
+    width: 500px;
+    height: 350px;
+    border-radius: 8px;
+    border: 2px solid #438EB9;
+}
+
+.subOrderBox .content i {
+    color: #438EB9;
+    font-size: 1.8em;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+.subOrderBox .content span {
+    color: #438EB9;
+    font-size: 1.1em;
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
+
+.subOrderBox .taskInfo span {
+    color: black;
+    font-weight: bold;
+    margin-left: -5px;
+}
+
+.subOrderBox .cargoInfo label {
+    margin-right: 50px;
+}
+
+.searchBox {
+    position: relative;
+    width: 800px;
+    height: 45px;
+    margin-top: -55%;
+    margin-right: 230px;
+    float: right;
+}
+
+.searchContent {
+    background-color: white;
+    width: 800px;
+    height: 45px;
+    border: 1px solid #438EB9;
+    border-radius: 30px;
+    box-shadow: 10px 10px 5px #888888;
+}
+
+.searchContent input {
+    margin-left: 20px;
+    width: 92%;
+    height: 100%;
+    border: 0;
+}
+
+.searchContent i {
+    margin: 5px;
+    font-size: 1.5em;
+}
+
+.userBox {
+    background-color: white;
+    width: 600px;
+    height: 500px;
+    float: right;
+    margin-top: -560px;
+    margin-right: 450px;
+    box-shadow: 10px 10px 5px #888888;
+    position: relative;
+}
+
+.passwordBox {
+    background-color: white;
+    width: 300px;
+    height: 380px;
+    float: right;
+    margin-top: -560px;
+    margin-right: 100px;
+    box-shadow: 10px 10px 5px #888888;
+    position: relative;
+}
+
+/*	.goodsBox{
+		background-color: white;
+		width: 300px;height: 500px;
+		float: right;
+		margin-top: -52%;margin-right: 150px;
+	}*/
+
+.subHeader {
+    padding: 10px;
+    color: #438EB9;
+    font-size: 1.5em;
+}
+
+.subHeader label {
+    font-size: 1em;
+}
+
+.content label {
+    padding-right: 5px;
+    padding-left: 20px;
+}
+
+.content input {
+    height: 30px;
+    margin-bottom: 10px;
+}
+
+.content .address input {
+    margin-left: 10px;
+    width: 400px;
+}
+
+.content .address {
+    margin-bottom: 10px;
+}
+
+.content a {
+    cursor: pointer;
+}
+
+.userContent label {
+    text-align: right;
+}
+
+.btnArea {
+    margin-left: 50px;
+}
+
+/*-------------------alert Box-------------------*/
+.alertBox {
+    background-color: white;
+    width: 400px;
+    height: 200px;
+    float: right;
+    margin-top: -29%;
+    margin-right: 450px;
+    margin-bottom: 100px;
+    box-shadow: 10px 10px 5px #888888;
+    position: relative;
+}
+
+.alertBox .alertHeader {
+    background-color: #438EB9;
+    height: 40px;
+    width: 100%;
+    box-shadow: 1px 1px 1px #888888;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 1.2em;
+    font-weight: bolder;
+    text-shadow: 1px 1px 2px lightgray;
+}
+
+.alertBox .alertContent {
+    text-align: center;
+    padding: 20px;
+    font-size: 1.2em;
+    font-weight: 500;
+    text-shadow: 1px 1px 2px #888888;
+}

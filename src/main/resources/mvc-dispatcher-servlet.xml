@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+      http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+      http://www.springframework.org/schema/context
+      http://www.springframework.org/schema/context/spring-context.xsd
+      http://www.springframework.org/schema/mvc
+      http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
+
+    <!--激活注解功能-->
+    <context:annotation-config/>
+
+
+    <!--DispatcherServlet上下文，只需管理@Controller类型的bean,忽略其他类型的bean,如@Service-->
+    <context:component-scan base-package="com.logistics.controller">
+        <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller" />
+    </context:component-scan>
+
+
+    <!--HandlerMapping,无需配置，Spring MVC可以默认启动。-->
+    <!--DefaultAnnotationHandlerMapping annotation-drive HandlerMapping-->
+
+
+    <!--扩展了注解驱动，可以将请求参数绑定在控制器参数上-->
+    <mvc:annotation-driven/>
+
+
+    <!--静态资源处理，js,css,image-->
+    <mvc:resources location="/js/" mapping="/js/**"/>
+    <mvc:resources location="/css/" mapping="/css/**"/>
+    <mvc:resources location="/fonts/" mapping="/fonts/**"/>
+    <mvc:resources location="/images/" mapping="/images/**"/>
+    <mvc:resources location="/image/" mapping="/image/**"/>
+
+
+    <!--配置ViewResolver,可以用多个ViewResolver.
+        以order属性排序，其中InternalResourceViewResolver需要放在最后-->
+    <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="viewClass" value="org.springframework.web.servlet.view.JstlView" />
+        <property name="prefix" value="/view/"></property>
+        <property name="suffix" value=".jsp"></property>
+    </bean>
+
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <property name="defaultEncoding" value="utf-8" />
+        <property name="maxUploadSize"   value="10485760000" />
+        <property name="maxInMemorySize" value="40960" />
+        <property name="resolveLazily"   value="true" />
+    </bean>
+
+    <!--配置拦截器-->
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/**"/>
+            <bean class="com.logistics.sys.interceptor.AuthorizeInterceptor">
+                <property name="admin_authorization">
+                    <list>
+                        <value>/goods</value>
+                    </list>
+                </property>
+                <property name="user_authorization">
+                    <list>
+                        <value></value>
+                    </list>
+                </property>
+            </bean>
+        </mvc:interceptor>
+    </mvc:interceptors>
+
+    <!--异常处理-->
+    <bean id="handlerExceptionResolver"
+          class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+        <property name="exceptionMappings">
+            <props>
+                <prop key="com.logistics.sys.interceptor.UserAuthorizationException">redirect:/index.jsp</prop>
+                <prop key="com.logistics.sys.interceptor.AdminAuthorizationException">redirect:/index.jsp</prop>
+            </props>
+        </property>
+    </bean>
+</beans>

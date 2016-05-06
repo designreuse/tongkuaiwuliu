@@ -1,0 +1,122 @@
+
+span,a,label,p{
+	font-family: "Microsoft YaHei", sans-serif ! important;
+}
+
+h1, h2, h3, h4, h5, h6, #title span {
+	font-family: "Microsoft YaHei", sans-serif ! important;
+	color: white;
+	font-weight: normal;
+}
+
+/*---------------------other---------------------*/
+.navbar{
+min-height:100px;
+}
+
+#title{
+font-size:45px;
+}
+
+.navbar-brand{
+margin-top:20px;
+}
+
+.fa{
+	margin: 1px;
+}
+
+.fa-square{
+	color: #438EB9;
+}
+
+/*---------------------sample table---------------------*/
+
+#sample-table_filter{
+	text-align: right;
+}
+
+#sample-table input[type="text"]{
+	width: 90%;
+	background-color: #D9ECFF;
+}
+
+#sample-table input[type="text"]:focus{
+	background-color: #B5DAFF;
+}
+
+#operationButton {
+	width: 100px;
+}
+
+#editItem2,#deleteItem2,#update,#save,#check,#cancal {
+	display: none;
+}
+
+a:hover{
+	cursor: pointer;
+}
+
+/*---------------------confirm box---------------------*/
+.confirmBox .boxLayer{
+	position: fixed;
+	top: 0;left: 0;
+	width: 100%;height: 100%;
+	background-color: #666666;
+	opacity: 0.95;
+	z-index: 520;
+}
+.confirmBox .popBox{
+	position: fixed;
+	left: 35%;top: 20%;
+	z-index: 521;
+	width: 350px;height: 140px;
+	border-radius: 5px;
+	font-weight: bold;
+	background-color: lightcyan;
+	color: #535e66;
+	border:1px solid #d14836;
+}
+
+.confirmBox .boxHeader{
+	background-color: #d14836;
+	color: white;
+	font-weight: bold;
+	padding-left: 10px;
+	line-height: 30px;
+}
+
+.confirmBox .btnArea{
+	margin-top: 35px;
+	text-align: center;
+}
+
+#tipText{
+	margin-top: 15px;
+	text-align: center;
+}
+
+/*---------------------slideTip Box---------------------*/
+.slideTip{
+	position: fixed;
+	bottom: 0; left: 0;
+	width: 200px; height: 80px;
+	border-radius: 5px;
+	display: none;
+	border:1px solid #438EB9;
+	z-index: 10;
+}
+
+.slideTip .slideHeader{
+	background-color: #438EB9;
+	color: white;
+	padding-left: 10px;
+	height: 30px; width: 100%;
+}
+
+.slideTip .slideContent{
+	font-weight: bold;
+	text-align: center;
+	padding-top: 10px;
+	background-color: lightcyan;
+}

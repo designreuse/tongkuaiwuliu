@@ -1,0 +1,43 @@
+#navbar{
+	background-color: #438EB9;
+	height: 50px;
+	border-radius: 5px;
+}
+
+#navbar .nav-brand{
+	color: white;
+	font-size: 1.5em;
+	padding-left: 10px;
+	padding-top: 8px;
+}
+
+.nav-list{
+	margin: 10px;	
+}
+
+.nav-list .content{
+	height: 100%;
+	font-size: 1.2em;
+	margin-left: 10px;
+}
+
+.addForm{
+	text-align: center;
+	width: 60%;
+	margin:auto;
+}
+
+.addForm h2{
+	color: #438EB9;	
+}
+
+.subHeader{
+	font-size: 1.5em;
+	color: #438EB9;
+	text-align: left;
+}
+
+.btnArea{
+	text-align: center;
+}
+
